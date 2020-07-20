@@ -1,0 +1,25 @@
+function bubbleSort(array) {
+  // change code below this line
+  //console.log('starting function');
+  let switchOccurred = true;
+
+  while (switchOccurred == true) {
+    //console.log("switch true in while loop");
+    switchOccurred = false;
+    for (let i = 0; i<array.length-1; i++){
+      //console.log('starting for loop')
+      if (array[i] > array[i+1]){
+        //console.log("inside if loop")
+        let x = array[i+1]
+        array[i+1] = array[i];
+        array[i] = x
+        switchOccurred = true
+      }
+    } 
+  } 
+  //console.log("switch not true")
+  console.log(array)
+  return array;
+}
+  
+bubbleSort([1, 4, 2, 8, 345, 123, 43, 32, 5643, 63, 123, 43, 2, 55, 1, 234, 92]);
